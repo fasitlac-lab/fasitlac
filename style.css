@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;800&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    background-image: url('https://lh3.googleusercontent.com/gps-cs-s/APNQkAF41oxPqvQwO8NhvXJ1-TzvLOZEVehE4IrjbcPOsWolDDamC7kbpRDmiptFfDyXXfmw9f0Q0vF3ZTQr9iECl9dWXLBxXFE1Z8DrJdOk-EGtzhb8ufwRtgrP_ye2fEJja2lzRJ8e1QtMfXyQ=s2000');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #ffffff;
+    font-family: 'Manrope', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Main Content */
+main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    text-align: left;
+    padding: 2rem 2rem 5rem 5rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    box-sizing: border-box;
+}
+
+.content-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 100%;
+}
+
+h1 {
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    font-weight: 800;
+    letter-spacing: 0.8em;
+    text-indent: 0.8em;
+    margin: 0;
+    opacity: 0.95;
+    text-transform: uppercase;
+    color: #fff;
+    mix-blend-mode: difference;
+    line-height: 1.2;
+}
+
+.contact a {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+    mix-blend-mode: difference;
+}
+
+.contact a:hover {
+    opacity: 1;
+    transform: translateX(10px);
+}
+
+.contact svg {
+    width: 20px;
+    height: 20px;
+}
+
+#logo-placeholder {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    main {
+        align-items: center;
+        text-align: center;
+        padding: 2rem;
+        justify-content: center;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2));
+    }
+
+    .content-bottom {
+        align-items: center;
+        gap: 2rem;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+        letter-spacing: 0.2em;
+        text-indent: 0.2em;
+        width: 100%;
+    }
+
+    .contact a:hover {
+        transform: none;
+    }
+}
+
+/* Smooth fade in */
+main {
+    animation: fadeIn 1.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
