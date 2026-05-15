@@ -20,9 +20,9 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    align-items: flex-start;
-    text-align: left;
-    padding: 2rem 2rem 5rem 5rem;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 2rem 5rem 2rem;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
     box-sizing: border-box;
 }
@@ -30,15 +30,16 @@ main {
 .content-bottom {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    align-items: center;
+    gap: 2.5rem;
     max-width: 100%;
 }
 
 h1 {
-    font-size: clamp(2rem, 6vw, 3.5rem);
+    font-size: clamp(1.5rem, 8vw, 4rem);
     font-weight: 800;
-    letter-spacing: 0.8em;
-    text-indent: 0.8em;
+    letter-spacing: 0.5em;
+    text-indent: 0.5em;
     margin: 0;
     opacity: 0.95;
     text-transform: uppercase;
@@ -105,6 +106,35 @@ h1 {
         transform: none;
     }
 }
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: clamp(1rem, 5vw, 3rem);
+    margin: 1rem 0;
+    mix-blend-mode: difference;
+    width: 100%;
+}
+
+.countdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.countdown-value {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-weight: 800;
+    letter-spacing: 0.1em;
+}
+
+.countdown-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    opacity: 0.6;
+}
+
 
 /* Smooth fade in */
 main {
